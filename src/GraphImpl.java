@@ -27,9 +27,19 @@ public class GraphImpl implements  Graph{
         int[][] tGraph = new int[matrix.length][];
         for(int i = 0; i < matrix.length; i++){
             for(int j = 0; j < matrix[i].length; j++){
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[i][matrix[i].length - i -1];
-                matrix[i][matrix[i].length - i -1] = temp;
+                int k = matrix[i][j];
+                int[] temp;
+                if(tGraph[k] == null){
+                    temp = new int[1];
+                }
+                else {
+                    temp = new int[tGraph[k].length+1];
+                }
+                for(int l = 0; l < temp.length -1; l++){
+                    temp[l] = tGraph[k][l];
+                }
+                temp[temp.length -1] = i;
+                tGraph[k] = temp;
             }
         }
         Graph returnGraph = new GraphImpl(tGraph);
