@@ -1,4 +1,7 @@
 public class WeightedGraphImpl implements WeightedGraph {
+    public WeightedGraphImpl(int[][] ints, double[][] doubles) {
+    }
+
     @Override
     public double weight(int v, int i) {
         return 0;
