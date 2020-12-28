@@ -57,7 +57,7 @@ public class WeightedGraphImpl implements WeightedGraph {
                 tWeighs[k] = temp2;
             }
         }
-        Graph returnGraph = new GraphImpl(tGraph);
+        Graph returnGraph = new WeightedGraphImpl(tGraph,tWeighs);
         return returnGraph;
     }
 }
