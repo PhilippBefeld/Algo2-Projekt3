@@ -10,7 +10,8 @@ public class WeightedGraphImpl implements WeightedGraph {
 
     @Override
     public double weight(int v, int i) {
-        return 0;
+        if(v >= 0 && v < size())return gewichte[v][i];
+        return -1;
     }
 
     @Override
@@ -21,13 +22,13 @@ public class WeightedGraphImpl implements WeightedGraph {
     @Override
     public int deg(int v) {
         if(v >= 0 && v < size())return kanten[v].length;
-        else return 0;
+        else return -1;
     }
 
     @Override
     public int succ(int v, int i) {
         if(v >= 0 && v < size())return kanten[v][i];
-        return 0;
+        return -1;
     }
 
     @Override

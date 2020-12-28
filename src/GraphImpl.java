@@ -13,13 +13,13 @@ public class GraphImpl implements  Graph{
     @Override
     public int deg(int v) {
         if(v >= 0 && v < size())return matrix[v].length;
-        else return 0;
+        else return -1;
     }
 
     @Override
     public int succ(int v, int i) {
         if(v >= 0 && v < size())return matrix[v][i];
-        return 0;
+        return -1;
     }
 
     @Override
