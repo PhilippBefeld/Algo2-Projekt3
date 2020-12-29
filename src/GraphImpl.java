@@ -12,7 +12,9 @@ public class GraphImpl implements  Graph{
 
     @Override
     public int deg(int v) {
-        if(v >= 0 && v < size())return matrix[v].length;
+        if(v >= 0 && v < size()){
+            return matrix[v].length;
+        }
         else return -1;
     }
 
@@ -40,6 +42,11 @@ public class GraphImpl implements  Graph{
                 }
                 temp[temp.length -1] = i;
                 tGraph[k] = temp;
+            }
+        }
+        for(int i = 0; i < matrix.length; i++){
+            if(tGraph[i]==null){
+                tGraph[i]=new int[0];
             }
         }
         Graph returnGraph = new GraphImpl(tGraph);
