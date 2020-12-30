@@ -40,14 +40,57 @@ class GraphTest {
 //            }),
 
             // Beispiel eines gewichteten Graphen.
-            new WeightedGraphImpl(new int [] [] {
-                    { 1, 2 },	// Knoten 0 hat als Nachfolger Knoten 1 und 2.
-                    { },	// Knoten 1 hat keine Nachfolger.
-                    { 2 }	// Knoten 2 hat als Nachfolger sich selbst.
-            }, new double [] [] {
-                    { 1.5, 0 },	// Gewichte der Kanten (0, 1) und (0, 2).
-                    { },
-                    { -3.7 }	// Gewicht der Kante (2, 0).
+//            new WeightedGraphImpl(new int [] [] {
+//                    { 1, 2 },	// Knoten 0 hat als Nachfolger Knoten 1 und 2.
+//                    { },	// Knoten 1 hat keine Nachfolger.
+//                    { 2 }	// Knoten 2 hat als Nachfolger sich selbst.
+//            }, new double [] [] {
+//                    { 1.5, 0 },	// Gewichte der Kanten (0, 1) und (0, 2).
+//                    { },
+//                    { -3.7 }	// Gewicht der Kante (2, 0).
+//            }),
+//            new WeightedGraphImpl(new int[][]{
+//                    {1, 2},
+//                    {0, 3},
+//                    {0, 3},
+//                    {1, 2}
+//            }, new double[][]{
+//                    {2, 2},
+//                    {2, 4},
+//                    {2, 1},
+//                    {4, 1}
+//            }),
+//            new WeightedGraphImpl(new int[][]{
+//                    {1},
+//                    {0,2},
+//                    {1,3},
+//                    {2,6,7},
+//                    {5,6},
+//                    {4,7},
+//                    {3,4,7},
+//                    {3,5,6}
+//            }, new double[][]{
+//                    {3},
+//                    {3,6},
+//                    {6,-3},
+//                    {-3,2,5},
+//                    {4,8},
+//                    {4,4},
+//                    {2,8,1},
+//                    {5,4,1}
+//            }),
+            new WeightedGraphImpl(new int[][]{
+                    {1, 2},
+                    {0, 3, 4},
+                    {0, 3},
+                    {1, 2, 4},
+                    {1, 3}
+            }, new double[][]{
+                    {1, 2},
+                    {1, 5, 6},
+                    {2, 5},
+                    {5, 5, 2},
+                    {6, 2},
             }),
 
             // Eine ungewöhnliche Implementierung des Graphen 0 <-> 1

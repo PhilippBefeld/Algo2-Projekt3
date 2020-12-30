@@ -24,7 +24,7 @@ public class MSFImpl implements MSF{
                     pred[g.succ(u,i)]=u;
                 }
             }
-            q.extractMin();
+            u = (int)q.extractMin().data();
         }
     }
 
