@@ -12,7 +12,7 @@ public class SPImpl implements SP {
             dist[i] = INF;
         }
         dist[s] = 0;
-        for(int i = 1; i < g.size(); i++) {
+        for(int n = 1; n < g.size(); n++) {
             for (int u = 0; u < g.size(); u++) {
                 for (int v = 0; v < g.deg(u); v++) {
                     if (dist[u] + g.weight(u, v) < dist[g.succ(u, v)]) {

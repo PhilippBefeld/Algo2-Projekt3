@@ -21,16 +21,25 @@ class GraphTest {
 //                    {2},
 //                    {4},
 //                    {2,4}
+////            }),
+                new GraphImpl((new int [][] {
+                        {2},
+                        {0,2,4},
+                        {},
+                        {0,1},
+                        {0,3},
+                        {4,6},
+                        {3,5,6},
+                })),
+//            new GraphImpl(new int[][]{
+//                    {1, 2},
+//                    {3},
+//                    {},
+//                    {4},
+//                    {},
+//                    {4},
+//                    {5}
 //            }),
-            new GraphImpl(new int[][]{
-                    {1, 2},
-                    {3},
-                    {},
-                    {4},
-                    {},
-                    {4},
-                    {5}
-            }),
 //            new GraphImpl(new int[][]{
 //                    {1, 2},
 //                    {3, 4},
@@ -174,7 +183,7 @@ class GraphTest {
             case "scc":
                 SCC scc = new SCCImpl();
                 scc.compute(graph);
-                for (int v = 0; v < n; v++) {
+                for (int v = 0; v < n; v++) {   
                     print(v, "component", scc.component(v));
                 }
                 break;

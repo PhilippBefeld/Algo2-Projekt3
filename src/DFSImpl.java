@@ -65,6 +65,11 @@ public class DFSImpl implements DFS{
 
     @Override
     public boolean sort(Graph g) {
+        status=new char[g.size()];
+        finFolge= new int[g.size()];
+        pred= new int[g.size()];
+        det= new int[g.size()];
+        fin= new int[g.size()];
         zeit=0;
         finZeit=0;
         for(int i =0; i<=g.size()-1; i++){
@@ -83,7 +88,7 @@ public class DFSImpl implements DFS{
     public boolean durchsuche2(int u, Graph g){
         status[u]='g';
         det[u]=++zeit;
-        for(int v = 0; v <g.deg(u); v++){
+        for(int v = 0; v <g.deg(u);  v++){
             if(status[g.succ(u,v)]=='w'){
                 pred[g.succ(u,v)]=u;
                 durchsuche2(g.succ(u,v),g);

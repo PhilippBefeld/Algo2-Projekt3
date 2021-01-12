@@ -18,6 +18,10 @@ public class SCCImpl implements SCC{
             }
             SZK[ts2.sequ(i)]=j;
         }
+//            for (int i = 0; i < g.size(); i++) {
+//                int v = ts2.sequ(i);
+//                System.out.println(v+ " det "+ts2.det(v)+ " fin "+ ts2.fin(v));
+//            }
     }
 
     @Override
